@@ -29,7 +29,7 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include "openvdb.h"
-#include <openvdb/tools/PointIndexGrid.h>
+#include <tools/PointIndexGrid.h>
 #include <tbb/mutex.h>
 #ifdef OPENVDB_USE_LOG4CPLUS
 #include <log4cplus/configurator.h>

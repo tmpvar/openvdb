@@ -33,7 +33,7 @@
 #include "File.h" ///< @todo refactor
 #include "GridDescriptor.h"
 #include "TempFile.h"
-#include <openvdb/Exceptions.h>
+#include <Exceptions.h>
 #include <boost/cstdint.hpp>
 #include <boost/iostreams/copy.hpp>
 #include <boost/bind.hpp>

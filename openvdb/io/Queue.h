@@ -34,8 +34,8 @@
 #ifndef OPENVDB_IO_QUEUE_HAS_BEEN_INCLUDED
 #define OPENVDB_IO_QUEUE_HAS_BEEN_INCLUDED
 
-#include <openvdb/Types.h>
-#include <openvdb/Grid.h>
+#include <Types.h>
+#include <Grid.h>
 #include <boost/function.hpp>
 #include <boost/shared_ptr.hpp>
 #include <algorithm> // for std::copy
@@ -59,8 +59,8 @@ class Archive;
 /// @code
 /// #include <boost/bind.hpp>
 /// #include <tbb/concurrent_hash_map.h>
-/// #include <openvdb/openvdb.h>
-/// #include <openvdb/io/Queue.h>
+/// #include "openvdb.h"
+/// #include <io/Queue.h>
 ///
 /// using openvdb::io::Queue;
 ///

@@ -73,8 +73,8 @@
 #include <boost/type_traits/is_const.hpp>
 #include <tbb/null_mutex.h>
 #include <tbb/spin_mutex.h>
-#include <openvdb/version.h>
-#include <openvdb/Types.h>
+#include <version.h>
+#include <Types.h>
 
 namespace openvdb {
 OPENVDB_USE_VERSION_NAMESPACE

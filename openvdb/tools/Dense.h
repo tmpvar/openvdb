@@ -36,10 +36,10 @@
 #ifndef OPENVDB_TOOLS_DENSE_HAS_BEEN_INCLUDED
 #define OPENVDB_TOOLS_DENSE_HAS_BEEN_INCLUDED
 
-#include <openvdb/Types.h>
-#include <openvdb/Grid.h>
-#include <openvdb/tree/ValueAccessor.h>
-#include <openvdb/Exceptions.h>
+#include <Types.h>
+#include <Grid.h>
+#include <tree/ValueAccessor.h>
+#include <Exceptions.h>
 #include <tbb/parallel_for.h>
 #include <boost/scoped_array.hpp>
 #include <boost/scoped_ptr.hpp>

@@ -31,14 +31,14 @@
 #include <cppunit/extensions/HelperMacros.h>
 
 #include <limits>
-#include <openvdb/openvdb.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/math/Math.h>
-#include <openvdb/math/Stats.h>
-#include <openvdb/tools/Diagnostics.h>
-#include <openvdb/tools/Statistics.h>
-#include <openvdb/tools/LevelSetSphere.h>
-#include <openvdb/tools/LevelSetUtil.h>
+#include "openvdb.h"
+#include <Exceptions.h>
+#include <math/Math.h>
+#include <math/Stats.h>
+#include <tools/Diagnostics.h>
+#include <tools/Statistics.h>
+#include <tools/LevelSetSphere.h>
+#include <tools/LevelSetUtil.h>
 
 class TestDiagnostics: public CppUnit::TestCase
 {
@@ -185,22 +185,22 @@ TestDiagnostics::testDiagnose()
 
     FloatGrid::Ptr gridSphere =
         tools::createLevelSetSphere<FloatGrid>(radius, center, voxelSize, width);
-        
+
     //gridSphere->print(std::cerr, 2);
-    
+
     {// Check min/max of active values
         math::Extrema ex = tools::extrema(gridSphere->cbeginValueOn());
         //std::cerr << "Min = " << ex.min() << " max = " << ex.max() << std::endl;
         CPPUNIT_ASSERT(ex.min() > -voxelSize*width);
         CPPUNIT_ASSERT(ex.max() <  voxelSize*width);
-        
+
     }
     {// Check min/max of all values
         math::Extrema ex = tools::extrema(gridSphere->cbeginValueAll());
         //std::cerr << "Min = " << ex.min() << " max = " << ex.max() << std::endl;
         CPPUNIT_ASSERT(ex.min() >= -voxelSize*width);
         CPPUNIT_ASSERT(ex.max() <=  voxelSize*width);
-        
+
     }
     {// check range of all values in a sphere w/o mask
         tools::CheckRange<FloatGrid, true, true, FloatGrid::ValueAllCIter> c(-gamma, gamma);

@@ -29,7 +29,7 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
+#include <Exceptions.h>
 
 
 class TestExceptions : public CppUnit::TestCase

@@ -29,8 +29,8 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/Metadata.h>
+#include <Exceptions.h>
+#include <Metadata.h>
 
 class TestVec3Metadata : public CppUnit::TestCase
 {

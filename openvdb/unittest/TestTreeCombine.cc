@@ -29,10 +29,10 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Types.h>
-#include <openvdb/openvdb.h>
-#include <openvdb/tools/Composite.h>
-#include <openvdb/util/CpuTimer.h>
+#include <Types.h>
+#include "openvdb.h"
+#include <tools/Composite.h>
+#include <util/CpuTimer.h>
 #include "util.h" // for unittest_util::makeSphere()
 #include <limits> // for std::numeric_limits
 #include <boost/math/special_functions/fpclassify.hpp> // for boost::math::isnan() and isinf()
@@ -40,7 +40,7 @@
 #define TEST_CSG_VERBOSE 0
 
 #if TEST_CSG_VERBOSE
-#include <openvdb/util/CpuTimer.h>
+#include <util/CpuTimer.h>
 #endif
 
 namespace {

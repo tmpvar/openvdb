@@ -29,11 +29,11 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/math/Hermite.h>
-#include <openvdb/math/QuantizedUnitVec.h>
-#include <openvdb/math/Math.h>
-#include <openvdb/math/Vec3.h>
+#include <Exceptions.h>
+#include <math/Hermite.h>
+#include <math/QuantizedUnitVec.h>
+#include <math/Math.h>
+#include <math/Vec3.h>
 #include <sstream>
 
 #include <algorithm>

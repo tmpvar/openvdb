@@ -29,7 +29,7 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include "QuantizedUnitVec.h"
-#include <openvdb/Types.h>
+#include <Types.h>
 #include <tbb/atomic.h>
 #include <tbb/mutex.h>
 

@@ -43,7 +43,7 @@
 #include <GL/gl.h>
 #include <GL/glu.h>
 #endif
-#include <GL/glfw.h>
+#include <glfw.h>
 #endif // !defined(OPENVDB_USE_GLFW_3)
 
 

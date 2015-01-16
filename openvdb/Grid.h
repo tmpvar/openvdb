@@ -37,12 +37,12 @@
 #include <boost/static_assert.hpp>
 #include <boost/type_traits/remove_const.hpp>
 #include <boost/type_traits/is_floating_point.hpp>
-#include <openvdb/Types.h>
-#include <openvdb/util/Name.h>
-#include <openvdb/math/Transform.h>
-#include <openvdb/tree/Tree.h>
-#include <openvdb/metadata/MetaMap.h>
-#include <openvdb/Exceptions.h>
+#include <Types.h>
+#include <util/Name.h>
+#include <math/Transform.h>
+#include <tree/Tree.h>
+#include <metadata/MetaMap.h>
+#include <Exceptions.h>
 
 
 namespace openvdb {

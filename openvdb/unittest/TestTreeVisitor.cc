@@ -37,8 +37,8 @@
 #include <boost/type_traits/is_const.hpp>
 #include <boost/shared_ptr.hpp>
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/openvdb.h>
-#include <openvdb/tree/Tree.h>
+#include "openvdb.h"
+#include <tree/Tree.h>
 
 
 class TestTreeVisitor: public CppUnit::TestCase

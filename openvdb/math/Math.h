@@ -48,8 +48,8 @@
 #include <boost/random/uniform_01.hpp>
 #include <boost/random/uniform_int.hpp>
 #include <boost/version.hpp> // for BOOST_VERSION
-#include <openvdb/Platform.h>
-#include <openvdb/version.h>
+#include <Platform.h>
+#include <version.h>
 
 
 // Compile pragmas

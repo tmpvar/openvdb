@@ -32,7 +32,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
-#include <openvdb/openvdb.h>
+#include "openvdb.h"
 #ifdef DWA_OPENVDB
 #include <logging_base/logging.h>
 #include <usagetrack.h>

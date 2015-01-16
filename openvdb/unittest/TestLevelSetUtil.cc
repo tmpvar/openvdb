@@ -31,9 +31,9 @@
 #include <vector>
 #include <cppunit/extensions/HelperMacros.h>
 
-#include <openvdb/openvdb.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/tools/LevelSetUtil.h>
+#include "openvdb.h"
+#include <Exceptions.h>
+#include <tools/LevelSetUtil.h>
 
 class TestLevelSetUtil: public CppUnit::TestCase
 {

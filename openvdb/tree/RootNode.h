@@ -50,13 +50,13 @@
 #include <boost/mpl/push_back.hpp>
 #include <boost/mpl/size.hpp>
 #include <tbb/parallel_for.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/Types.h>
-#include <openvdb/io/Compression.h> // for truncateRealToHalf()
-#include <openvdb/math/Math.h> // for isZero(), isExactlyEqual(), etc.
-#include <openvdb/math/BBox.h>
-#include <openvdb/util/NodeMasks.h> // for backward compatibility only (see readTopology())
-#include <openvdb/version.h>
+#include <Exceptions.h>
+#include <Types.h>
+#include <io/Compression.h> // for truncateRealToHalf()
+#include <math/Math.h> // for isZero(), isExactlyEqual(), etc.
+#include <math/BBox.h>
+#include <util/NodeMasks.h> // for backward compatibility only (see readTopology())
+#include <version.h>
 
 
 namespace openvdb {
@@ -449,9 +449,9 @@ public:
     ///
     /// @note Instead of setting @a updateChildNodes to true, consider
     /// using tools::changeBackground or
-    /// tools::changeLevelSetBackground which are multi-threaded!  
+    /// tools::changeLevelSetBackground which are multi-threaded!
     void setBackground(const ValueType& value, bool updateChildNodes);
-    
+
     /// Return this node's background value.
     const ValueType& background() const { return mBackground; }
 
@@ -683,7 +683,7 @@ public:
     /// @brief Add a tile containing voxel (x, y, z) at the root level,
     /// deleting the existing branch if necessary.
     void addTile(const Coord& xyz, const ValueType& value, bool state);
-    
+
     /// @brief Add a tile containing voxel (x, y, z) at the specified tree level,
     /// creating a new branch if necessary.  Delete any existing lower-level nodes
     /// that contain (x, y, z).
@@ -774,7 +774,7 @@ public:
     template<typename ArrayT> void getNodes(ArrayT& array);
     template<typename ArrayT> void getNodes(ArrayT& array) const;
     //@}
-    
+
     /// Densify active tiles, i.e., replace them with leaf-level active voxels.
     void voxelizeActiveTiles();
 

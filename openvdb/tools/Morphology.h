@@ -46,12 +46,12 @@
 #ifndef OPENVDB_TOOLS_MORPHOLOGY_HAS_BEEN_INCLUDED
 #define OPENVDB_TOOLS_MORPHOLOGY_HAS_BEEN_INCLUDED
 
-#include <openvdb/Types.h>
-#include <openvdb/Grid.h>
-#include <openvdb/math/Math.h> // for isApproxEqual()
-#include <openvdb/tree/TreeIterator.h>
-#include <openvdb/tree/ValueAccessor.h>
-#include <openvdb/tree/LeafManager.h>
+#include <Types.h>
+#include <Grid.h>
+#include <math/Math.h> // for isApproxEqual()
+#include <tree/TreeIterator.h>
+#include <tree/ValueAccessor.h>
+#include <tree/LeafManager.h>
 #include <boost/scoped_array.hpp>
 #include <boost/bind.hpp>
 #include "Prune.h"// for pruneLevelSet

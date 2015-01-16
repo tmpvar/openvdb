@@ -31,8 +31,8 @@
 #ifndef OPENVDB_UNITTEST_UTIL_HAS_BEEN_INCLUDED
 #define OPENVDB_UNITTEST_UTIL_HAS_BEEN_INCLUDED
 
-#include <openvdb/openvdb.h>
-#include <openvdb/tools/Prune.h>// for pruneLevelSet
+#include "openvdb.h"
+#include <tools/Prune.h>// for pruneLevelSet
 #include <sstream>
 
 namespace unittest_util {

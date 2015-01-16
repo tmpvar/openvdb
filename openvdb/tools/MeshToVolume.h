@@ -31,13 +31,13 @@
 #ifndef OPENVDB_TOOLS_MESH_TO_VOLUME_HAS_BEEN_INCLUDED
 #define OPENVDB_TOOLS_MESH_TO_VOLUME_HAS_BEEN_INCLUDED
 
-#include <openvdb/Types.h>
-#include <openvdb/math/FiniteDifference.h>
-#include <openvdb/math/Operators.h> // for ISGradientNormSqrd
-#include <openvdb/math/Proximity.h> // for closestPointOnTriangleToPoint()
-#include <openvdb/tools/Morphology.h> // for dilateVoxels()
-#include <openvdb/util/NullInterrupter.h>
-#include <openvdb/util/Util.h> // for nearestCoord()
+#include <Types.h>
+#include <math/FiniteDifference.h>
+#include <math/Operators.h> // for ISGradientNormSqrd
+#include <math/Proximity.h> // for closestPointOnTriangleToPoint()
+#include <tools/Morphology.h> // for dilateVoxels()
+#include <util/NullInterrupter.h>
+#include <util/Util.h> // for nearestCoord()
 #include "ChangeBackground.h"
 #include "Prune.h"// for pruneInactive and pruneLevelSet
 #include "SignedFloodFill.h" // for signedFloodFillWithValues

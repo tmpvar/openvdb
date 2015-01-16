@@ -35,8 +35,8 @@
 #include <tbb/blocked_range3d.h>
 #include <tbb/blocked_range2d.h>
 #include <tbb/blocked_range.h>
-#include <openvdb/Types.h>
-#include <openvdb/tree/LeafManager.h>
+#include <Types.h>
+#include <tree/LeafManager.h>
 #include "Dense.h"
 
 

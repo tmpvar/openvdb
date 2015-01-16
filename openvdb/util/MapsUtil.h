@@ -33,7 +33,7 @@
 #ifndef OPENVDB_UTIL_MAPSUTIL_HAS_BEEN_INCLUDED
 #define OPENVDB_UTIL_MAPSUTIL_HAS_BEEN_INCLUDED
 
-#include <openvdb/math/Maps.h>
+#include <math/Maps.h>
 
 
 namespace openvdb {

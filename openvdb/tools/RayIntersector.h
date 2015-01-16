@@ -59,12 +59,12 @@
 #ifndef OPENVDB_TOOLS_RAYINTERSECTOR_HAS_BEEN_INCLUDED
 #define OPENVDB_TOOLS_RAYINTERSECTOR_HAS_BEEN_INCLUDED
 
-#include <openvdb/math/DDA.h>
-#include <openvdb/math/Math.h>
-#include <openvdb/math/Ray.h>
-#include <openvdb/math/Stencils.h>
-#include <openvdb/Grid.h>
-#include <openvdb/Types.h>
+#include <math/DDA.h>
+#include <math/Math.h>
+#include <math/Ray.h>
+#include <math/Stencils.h>
+#include <Grid.h>
+#include <Types.h>
 #include "Morphology.h"
 #include <boost/utility.hpp>
 #include <boost/type_traits/is_floating_point.hpp>
@@ -447,7 +447,7 @@ public:
     /// @note ListType is a list of RayType::TimeSpan and is required to
     /// have the two methods: clear() and push_back(). Thus, it could
     /// be std::vector<typename RayType::TimeSpan> or
-    /// std::deque<typename RayType::TimeSpan>. 
+    /// std::deque<typename RayType::TimeSpan>.
     template <typename ListType>
     inline void hits(ListType& list)
     {

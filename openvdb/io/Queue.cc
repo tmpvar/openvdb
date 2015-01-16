@@ -35,8 +35,8 @@
 
 #include "File.h"
 #include "Stream.h"
-#include <openvdb/Exceptions.h>
-#include <openvdb/util/logging.h>
+#include <Exceptions.h>
+#include <util/logging.h>
 #include <boost/bind.hpp>
 #include <tbb/atomic.h>
 #include <tbb/concurrent_hash_map.h>

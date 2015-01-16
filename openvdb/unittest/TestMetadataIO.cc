@@ -29,8 +29,8 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Metadata.h>
-#include <openvdb/Types.h>
+#include <Metadata.h>
+#include <Types.h>
 #include <iostream>
 #include <sstream>
 

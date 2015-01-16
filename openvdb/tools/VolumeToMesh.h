@@ -31,12 +31,12 @@
 #ifndef OPENVDB_TOOLS_VOLUME_TO_MESH_HAS_BEEN_INCLUDED
 #define OPENVDB_TOOLS_VOLUME_TO_MESH_HAS_BEEN_INCLUDED
 
-#include <openvdb/Platform.h> // for OPENVDB_HAS_CXX11
-#include <openvdb/tree/ValueAccessor.h>
-#include <openvdb/util/Util.h> // for COORD_OFFSETS
-#include <openvdb/math/Operators.h> // for ISGradient
-#include <openvdb/tools/Morphology.h> // for dilateVoxels()
-#include <openvdb/tree/LeafManager.h>
+#include <Platform.h> // for OPENVDB_HAS_CXX11
+#include <tree/ValueAccessor.h>
+#include <util/Util.h> // for COORD_OFFSETS
+#include <math/Operators.h> // for ISGradient
+#include <tools/Morphology.h> // for dilateVoxels()
+#include <tree/LeafManager.h>
 #include "Prune.h" // for pruneInactive
 
 #include <boost/scoped_array.hpp>

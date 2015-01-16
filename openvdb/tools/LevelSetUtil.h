@@ -36,9 +36,9 @@
 #ifndef OPENVDB_TOOLS_LEVELSETUTIL_HAS_BEEN_INCLUDED
 #define OPENVDB_TOOLS_LEVELSETUTIL_HAS_BEEN_INCLUDED
 
-#include <openvdb/Grid.h>
-#include <openvdb/tree/LeafManager.h>
-#include <openvdb/tools/Prune.h>
+#include <Grid.h>
+#include <tree/LeafManager.h>
+#include <tools/Prune.h>
 #include <tbb/blocked_range.h>
 #include <tbb/parallel_reduce.h>
 #include <limits>

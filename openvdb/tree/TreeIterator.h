@@ -42,8 +42,8 @@
 #include <boost/type_traits/remove_const.hpp>
 #include <tbb/blocked_range.h>
 #include <tbb/parallel_for.h>
-#include <openvdb/version.h>
-#include <openvdb/Types.h>
+#include <version.h>
+#include <Types.h>
 
 // Prior to 0.96.1, depth-bounded value iterators always descended to the leaf level
 // and iterated past leaf nodes.  Now, they never descend past the maximum depth.

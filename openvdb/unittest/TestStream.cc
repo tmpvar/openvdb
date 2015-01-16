@@ -29,13 +29,13 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/io/Stream.h>
-#include <openvdb/Metadata.h>
-#include <openvdb/math/Maps.h>
-#include <openvdb/math/Transform.h>
-#include <openvdb/version.h>
-#include <openvdb/openvdb.h>
+#include <Exceptions.h>
+#include <io/Stream.h>
+#include <Metadata.h>
+#include <math/Maps.h>
+#include <math/Transform.h>
+#include <version.h>
+#include "openvdb.h"
 #include <cstdio> // for remove()
 #include <fstream>
 

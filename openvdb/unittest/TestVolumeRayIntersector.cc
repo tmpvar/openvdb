@@ -31,13 +31,13 @@
 /// @author Ken Museth
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/openvdb.h>
-#include <openvdb/math/Ray.h>
-#include <openvdb/Types.h>
-#include <openvdb/math/Transform.h>
-#include <openvdb/tools/LevelSetSphere.h>
-#include <openvdb/tools/RayIntersector.h>
+#include <Exceptions.h>
+#include "openvdb.h"
+#include <math/Ray.h>
+#include <Types.h>
+#include <math/Transform.h>
+#include <tools/LevelSetSphere.h>
+#include <tools/RayIntersector.h>
 
 #include <iostream>
 #include <fstream>
@@ -240,7 +240,7 @@ TestVolumeRayIntersector::testAll()
         const RayT ray(eye, dir);//ray in index space
         tools::VolumeRayIntersector<FloatGrid> inter(grid);
         CPPUNIT_ASSERT(inter.setIndexRay(ray));
-        
+
         std::deque<RayT::TimeSpan> list;
         inter.hits(list);
         CPPUNIT_ASSERT(list.size() == 2);

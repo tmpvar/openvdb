@@ -36,7 +36,7 @@
 #define OPENVDB_MATH_STATS_HAS_BEEN_INCLUDED
 
 #include <iosfwd> // for ostringstream
-#include <openvdb/version.h>
+#include <version.h>
 #include <iostream>
 #include <iomanip>
 #include <sstream>

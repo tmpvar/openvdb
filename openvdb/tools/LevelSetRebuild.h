@@ -31,14 +31,14 @@
 #ifndef OPENVDB_TOOLS_LEVELSETREBUILD_HAS_BEEN_INCLUDED
 #define OPENVDB_TOOLS_LEVELSETREBUILD_HAS_BEEN_INCLUDED
 
-#include <openvdb/Grid.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/math/Math.h>
-#include <openvdb/math/Transform.h>
-#include <openvdb/tools/VolumeToMesh.h>
-#include <openvdb/tools/MeshToVolume.h>
-#include <openvdb/util/NullInterrupter.h>
-#include <openvdb/util/Util.h>
+#include <Grid.h>
+#include <Exceptions.h>
+#include <math/Math.h>
+#include <math/Transform.h>
+#include <tools/VolumeToMesh.h>
+#include <tools/MeshToVolume.h>
+#include <util/NullInterrupter.h>
+#include <util/Util.h>
 #include <boost/type_traits/is_floating_point.hpp>
 #include <boost/utility/enable_if.hpp>
 #include <tbb/blocked_range.h>

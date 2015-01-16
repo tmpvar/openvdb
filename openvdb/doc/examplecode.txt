@@ -44,7 +44,7 @@ its voxels.  OpenVDB supports both random access to voxels by coordinates
 and sequential access by means of iterators.  This example illustrates both
 types of access:
 @code
-#include <openvdb/openvdb.h>
+#include "openvdb.h"
 #include <iostream>
 
 int main()
@@ -135,7 +135,7 @@ This example is a complete program that illustrates some of the basic steps
 to create grids and write them to disk.  (See @ref sPopulatingGrids,
 below, for the implementation of the @c makeSphere() function.)
 @code
-#include <openvdb/openvdb.h>
+#include "openvdb.h"
 
 int main()
 {
@@ -188,8 +188,8 @@ For example, most of the steps given above are encapsulated in the function
 the above can be written simply as follows:
 
 @code
-#include <openvdb/openvdb.h>
-#include <openvdb/tools/LevelSetSphere.h>
+#include "openvdb.h"
+#include <tools/LevelSetSphere.h>
 
 int main()
 {
@@ -298,7 +298,7 @@ makeSphere(GridType& grid, float radius, const openvdb::Vec3f& c)
 
 @section sModifyingGrids Reading and modifying a grid
 @code
-#include <openvdb/openvdb.h>
+#include "openvdb.h"
 
 openvdb::initialize();
 
@@ -367,8 +367,8 @@ grids can be read individually by name, provided that they were originally
 written with @c io::File, rather than streamed to a file.)
 
 @code
-#include <openvdb/openvdb.h>
-#include <openvdb/io/Stream.h>
+#include "openvdb.h"
+#include <io/Stream.h>
 
 openvdb::initialize();
 
@@ -413,7 +413,7 @@ the existing value if the name matches an existing one.  An existing value
 cannot be overwritten with a new value of a different type; the old metadata
 must be removed first.
 @code
-#include <openvdb/openvdb.h>
+#include "openvdb.h"
 
 openvdb::Vec3SGrid::Ptr grid = openvdb::Vec3SGrid::create();
 
@@ -497,7 +497,7 @@ why node iteration can be complicated when the tree depth is not known.
 There are techniques (beyond the scope of this Cookbook) for operating
 on trees of arbitrary depth.
 @code
-#include <openvdb/openvdb.h>
+#include "openvdb.h"
 
 typedef openvdb::FloatGrid GridType;
 typedef GridType::TreeType TreeType;
@@ -524,7 +524,7 @@ for (TreeType::NodeIter iter = grid->tree().beginNode(); iter; ++iter) {
 A @vdblink::tree::Tree::LeafIter Tree::LeafIter@endlink visits each leaf
 node in a tree exactly once.
 @code
-#include <openvdb/openvdb.h>
+#include "openvdb.h"
 
 typedef openvdb::FloatGrid GridType;
 typedef GridType::TreeType TreeType;
@@ -563,7 +563,7 @@ or only inactive values.  Note that tree-level value iterators (unlike
 the node iterators described above) can be accessed either through a
 grid's tree or directly through the grid itself, as in the following example:
 @code
-#include <openvdb/openvdb.h>
+#include "openvdb.h"
 
 typedef openvdb::Vec3SGrid GridType;
 typedef GridType::TreeType TreeType;
@@ -622,8 +622,8 @@ the iteration range of a
 the total number of active leaf-level voxels by incrementing a global,
 thread-safe counter.
 @code
-#include <openvdb/openvdb.h>
-#include <openvdb/tools/LevelSetSphere.h>
+#include "openvdb.h"
+#include <tools/LevelSetSphere.h>
 #include <tbb/parallel_for.h>
 #include <tbb/atomic.h>
 #include <cassert>
@@ -715,8 +715,8 @@ variants @vdblink::tools::StaggeredPointSampler StaggeredPointSampler@endlink,
 for @ref sStaggered "staggered" velocity grids.
 
 @code
-#include <openvdb/openvdb.h>
-#include <openvdb/tools/Interpolation.h>
+#include "openvdb.h"
+#include <tools/Interpolation.h>
 
 const GridType grid = ...;
 
@@ -761,8 +761,8 @@ continuous sampling in both world space and index space and can be used
 with grids, trees or value accessors.
 
 @code
-#include <openvdb/openvdb.h>
-#include <openvdb/tools/Interpolation.h>
+#include "openvdb.h"
+#include <tools/Interpolation.h>
 
 const GridType grid = ...;
 
@@ -813,8 +813,8 @@ In addition, DualGridSampler checks if the source and target grids are aligned
 interpolation.
 
 @code
-#include <openvdb/openvdb.h>
-#include <openvdb/tools/Interpolation.h>
+#include "openvdb.h"
+#include <tools/Interpolation.h>
 
 const GridType sourceGrid = ...;
 
@@ -857,8 +857,8 @@ multithreaded by default, though threading can be disabled by calling
 A @c GridTransformer object can be reused to apply the same transformation
 to multiple input grids, optionally using different sampling schemes.
 @code
-#include <openvdb/openvdb.h>
-#include <openvdb/tools/GridTransformer.h>
+#include "openvdb.h"
+#include <tools/GridTransformer.h>
 
 openvdb::FloatGrid::Ptr
     sourceGrid = ...
@@ -901,8 +901,8 @@ This example uses @vdblink::tools::foreach() tools::foreach()@endlink to
 multiply all values (both tile and voxel and both active and inactive)
 of a scalar, floating-point grid by two:
 @code
-#include <openvdb/openvdb.h>
-#include <openvdb/tools/ValueTransformer.h>
+#include "openvdb.h"
+#include <tools/ValueTransformer.h>
 
 // Define a local function that doubles the value to which the given
 // value iterator points.
@@ -922,8 +922,8 @@ This example uses @vdblink::tools::foreach() tools::foreach()@endlink to
 rotate all active vectors of a vector-valued grid by 45 degrees about the
 @em y axis:
 @code
-#include <openvdb/openvdb.h>
-#include <openvdb/tools/ValueTransformer.h>
+#include "openvdb.h"
+#include <tools/ValueTransformer.h>
 
 // Define a functor that multiplies the vector to which the given
 // value iterator points by a fixed matrix.
@@ -953,8 +953,8 @@ floating-point grid with the lengths of all active vectors from a
 vector-valued grid
 (like @vdblink::tools::magnitude() tools::magnitude()@endlink):
 @code
-#include <openvdb/openvdb.h>
-#include <openvdb/tools/ValueTransformer.h>
+#include "openvdb.h"
+#include <tools/ValueTransformer.h>
 
 // Define a local function that, given an iterator pointing to a vector value
 // in an input grid, sets the corresponding tile or voxel in a scalar,
@@ -999,8 +999,8 @@ The level set CSG functions in tools/Composite.h operate on pairs of grids
 of the same type, using sparse traversal for efficiency.  These operations
 always leave the second grid empty.
 @code
-#include <openvdb/openvdb.h>
-#include <openvdb/tools/Composite.h>
+#include "openvdb.h"
+#include <tools/Composite.h>
 
 // Two grids of the same type containing level set volumes
 openvdb::FloatGrid::Ptr gridA(...), gridB(...);
@@ -1035,8 +1035,8 @@ Like the @ref sCsgTools "CSG operations", the compositing functions in
 tools/Composite.h operate on pairs of grids of the same type, and they
 always leave the second grid empty.
 @code
-#include <openvdb/openvdb.h>
-#include <openvdb/tools/Composite.h>
+#include "openvdb.h"
+#include <tools/Composite.h>
 
 // Two grids of the same type
 openvdb::FloatGrid::Ptr gridA = ..., gridB = ...;
@@ -1083,7 +1083,7 @@ This example uses the @vdblink::tree::Tree::combine() Tree::combine()@endlink
 method to compute the difference between corresponding voxels of two
 floating-point grids:
 @code
-#include <openvdb/openvdb.h>
+#include "openvdb.h"
 
 // Define a local function that subtracts two floating-point values.
 struct Local {
@@ -1102,7 +1102,7 @@ aGrid->tree().combine(bGrid->tree(), Local::diff);
 Another @vdblink::tree::Tree::combine() Tree::combine()@endlink example,
 this time using a functor to preserve state:
 @code
-#include <openvdb/openvdb.h>
+#include "openvdb.h"
 
 // Define a functor that computes f * a + (1 - f) * b  for pairs of
 // floating-point values a and b.
@@ -1130,7 +1130,7 @@ floating-point @c aGrid are replaced with corresponding values from
 floating-point @c bGrid (leaving @c bGrid empty) wherever the @em b values
 are larger.  The active states of any transferred values are preserved.
 @code
-#include <openvdb/openvdb.h>
+#include "openvdb.h"
 
 // Define a local function that retrieves a and b values from a CombineArgs
 // struct and then sets the result member to the maximum of a and b.
@@ -1160,7 +1160,7 @@ not modify either of the two input trees.  (As a result, it is less
 space-efficient than the @c combine() method.)  Here, the voxel differencing
 example above is repeated using @c combine2():
 @code #include
-<openvdb/openvdb.h>
+"openvdb.h"
 
 struct Local {
     static inline void diff(const float& a, const float& b, float& result) {

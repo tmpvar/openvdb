@@ -36,11 +36,11 @@
 #ifndef OPENVDB_TOOLS_POINT_ADVECT_HAS_BEEN_INCLUDED
 #define OPENVDB_TOOLS_POINT_ADVECT_HAS_BEEN_INCLUDED
 
-#include <openvdb/openvdb.h>
-#include <openvdb/math/Math.h>             // min
-#include <openvdb/Types.h>                 // Vec3 types and version number
-#include <openvdb/Grid.h>                  // grid
-#include <openvdb/util/NullInterrupter.h>
+#include "openvdb.h"
+#include <math/Math.h>             // min
+#include <Types.h>                 // Vec3 types and version number
+#include <Grid.h>                  // grid
+#include <util/NullInterrupter.h>
 #include "Interpolation.h"                 // sampling
 
 #include <boost/static_assert.hpp>

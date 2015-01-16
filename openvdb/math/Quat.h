@@ -38,7 +38,7 @@
 #include "Mat3.h"
 #include "Math.h"
 #include "Vec3.h"
-#include <openvdb/Exceptions.h>
+#include <Exceptions.h>
 
 
 namespace openvdb {

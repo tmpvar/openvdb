@@ -29,9 +29,9 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/math/Math.h>
-#include <openvdb/Types.h>
+#include <Exceptions.h>
+#include <math/Math.h>
+#include <Types.h>
 #include <vector>
 
 

@@ -38,9 +38,9 @@
 #include "Vec3.h"
 #include "BBox.h"
 #include "Coord.h"
-#include <openvdb/io/io.h> // for io::getFormatVersion()
-#include <openvdb/util/Name.h>
-#include <openvdb/Types.h>
+#include <io/io.h> // for io::getFormatVersion()
+#include <util/Name.h>
+#include <Types.h>
 #include <boost/shared_ptr.hpp>
 #include <map>
 

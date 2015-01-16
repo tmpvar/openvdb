@@ -35,10 +35,10 @@
 #include <boost/shared_ptr.hpp>
 #include <boost/shared_array.hpp>
 #include <boost/static_assert.hpp>
-#include <openvdb/Types.h>
-#include <openvdb/io/Compression.h> // for io::readData(), etc.
-#include <openvdb/math/Math.h> // for math::isZero()
-#include <openvdb/util/NodeMasks.h>
+#include <Types.h>
+#include <io/Compression.h> // for io::readData(), etc.
+#include <math/Math.h> // for math::isZero()
+#include <util/NodeMasks.h>
 #include "LeafNode.h"
 #include "Iterator.h"
 

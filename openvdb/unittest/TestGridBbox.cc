@@ -30,11 +30,11 @@
 
 #include <cppunit/extensions/HelperMacros.h>
 
-#include <openvdb/openvdb.h>
-#include <openvdb/tree/Tree.h>
-#include <openvdb/tree/LeafNode.h>
-#include <openvdb/Types.h>
-#include <openvdb/Exceptions.h>
+#include "openvdb.h"
+#include <tree/Tree.h>
+#include <tree/LeafNode.h>
+#include <Types.h>
+#include <Exceptions.h>
 
 
 class TestGridBbox: public CppUnit::TestCase

@@ -42,7 +42,7 @@
 
 #include "LevelSetTracker.h"
 #include "Interpolation.h" // for BoxSampler, etc.
-#include <openvdb/math/FiniteDifference.h>
+#include <math/FiniteDifference.h>
 
 namespace openvdb {
 OPENVDB_USE_VERSION_NAMESPACE

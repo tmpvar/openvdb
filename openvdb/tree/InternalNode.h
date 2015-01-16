@@ -41,12 +41,12 @@
 #include <boost/type_traits/is_const.hpp>
 #include <boost/type_traits/is_pointer.hpp>
 #include <boost/type_traits/remove_pointer.hpp>
-#include <openvdb/Platform.h>
-#include <openvdb/util/NodeMasks.h>
-#include <openvdb/io/Compression.h> // for io::readData(), etc.
-#include <openvdb/math/Math.h> // for Abs(), isExactlyEqual()
-#include <openvdb/version.h>
-#include <openvdb/Types.h>
+#include <Platform.h>
+#include <util/NodeMasks.h>
+#include <io/Compression.h> // for io::readData(), etc.
+#include <math/Math.h> // for Abs(), isExactlyEqual()
+#include <version.h>
+#include <Types.h>
 #include "Iterator.h"
 #include "NodeUnion.h"
 

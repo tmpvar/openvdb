@@ -29,8 +29,8 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/math/Math.h> // for math::Random01
-#include <openvdb/tools/PointIndexGrid.h>
+#include <math/Math.h> // for math::Random01
+#include <tools/PointIndexGrid.h>
 
 #include <vector>
 #include <algorithm>

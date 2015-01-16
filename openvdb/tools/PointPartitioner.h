@@ -43,8 +43,8 @@
 #define OPENVDB_TOOLS_POINT_PARTITIONER_HAS_BEEN_INCLUDED
 
 
-#include <openvdb/Types.h>
-#include <openvdb/math/Transform.h>
+#include <Types.h>
+#include <math/Transform.h>
 
 #include <vector>
 #include <deque>
@@ -250,7 +250,7 @@ struct ComputeBBoxOp {
 
         for (size_t n = range.begin(), N = range.end(); n != N; ++n) {
             mPoints->getPos(n, pos);
-            
+
             if (boost::math::isfinite(pos[0]) &&
                 boost::math::isfinite(pos[1]) &&
                 boost::math::isfinite(pos[2])) {
@@ -342,7 +342,7 @@ struct BucketAndVoxelOffsetOp
             if (boost::math::isfinite(pos[0]) &&
                 boost::math::isfinite(pos[1]) &&
                 boost::math::isfinite(pos[2])) {
-                
+
                 ijk = mXForm.worldToIndexCellCentered(pos);
 
                 // coord to offset
@@ -350,21 +350,21 @@ struct BucketAndVoxelOffsetOp
                     loc[0] = ijk[0] & mask;
                     loc[1] = ijk[1] & mask;
                     loc[2] = ijk[2] & mask;
-                    
+
                     voxelOffset = VoxelOffsetT((loc[0] << log2dim2) + (loc[1] << log2dim) + loc[2]);
                 }
-                
+
                 ijk[0] >>= log2dim;
                 ijk[1] >>= log2dim;
                 ijk[2] >>= log2dim;
-                
+
                 ijk[0] -= xMin;
                 ijk[1] -= yMin;
                 ijk[2] -= zMin;
-                
+
                 bucketOffset = IndexT(ijk[0] * yzDim + ijk[1] * zDim + ijk[2]);
                 mBucketOffsets[n] = bucketOffset;
-                
+
                 if (mVoxelOffsets) mVoxelOffsets[n] = voxelOffset;
             }
         }
@@ -433,25 +433,25 @@ struct ComputeOffsetOp
                     loc[0] = ijk[0] & mask;
                     loc[1] = ijk[1] & mask;
                     loc[2] = ijk[2] & mask;
-                    
+
                     voxelOffset = VoxelOffsetT((loc[0] << log2dim2) + (loc[1] << log2dim) + loc[2]);
                 }
-                
+
                 ijk[0] >>= log2dim;
                 ijk[1] >>= log2dim;
                 ijk[2] >>= log2dim;
-                
+
                 ijk[0] -= xMin;
                 ijk[1] -= yMin;
                 ijk[2] -= zMin;
-                
+
                 bucketOffset = IndexT(ijk[0] * yzDim + ijk[1] * zDim + ijk[2]);
-                
+
                 IndexPairT& item = mBucketOffsets[n];
-                
+
                 item.first  = bucketOffset;
                 item.second = IndexT(n);
-                
+
                 if (mVoxelOffsets) mVoxelOffsets[n] = voxelOffset;
             }
         }
@@ -745,13 +745,13 @@ struct LeafNodeOriginOp
             if (boost::math::isfinite(pos[0]) &&
                 boost::math::isfinite(pos[1]) &&
                 boost::math::isfinite(pos[2])) {
-                
+
                 ijk = mXForm.worldToIndexCellCentered(pos);
-                
+
                 ijk[0] &= mask;
                 ijk[1] &= mask;
                 ijk[2] &= mask;
-                
+
                 mCoordinates[n] = ijk;
             }
         }

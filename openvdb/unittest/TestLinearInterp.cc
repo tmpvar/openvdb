@@ -29,9 +29,9 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/openvdb.h>
-#include <openvdb/tools/Interpolation.h>
+#include <Exceptions.h>
+#include "openvdb.h"
+#include <tools/Interpolation.h>
 
 // CPPUNIT_TEST_SUITE() invokes CPPUNIT_TESTNAMER_DECL() to generate a suite name
 // from the FixtureType.  But if FixtureType is a templated type, the generated name

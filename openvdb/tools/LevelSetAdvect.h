@@ -39,10 +39,10 @@
 #ifndef OPENVDB_TOOLS_LEVEL_SET_ADVECT_HAS_BEEN_INCLUDED
 #define OPENVDB_TOOLS_LEVEL_SET_ADVECT_HAS_BEEN_INCLUDED
 
-#include <openvdb/Platform.h>
+#include <Platform.h>
 #include "LevelSetTracker.h"
 #include "Interpolation.h" // for BoxSampler, etc.
-#include <openvdb/math/FiniteDifference.h>
+#include <math/FiniteDifference.h>
 #include <boost/math/constants/constants.hpp>
 
 namespace openvdb {

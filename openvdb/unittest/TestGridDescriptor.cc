@@ -29,9 +29,9 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/io/GridDescriptor.h>
-#include <openvdb/openvdb.h>
+#include <Exceptions.h>
+#include <io/GridDescriptor.h>
+#include "openvdb.h"
 
 
 class TestGridDescriptor: public CppUnit::TestCase

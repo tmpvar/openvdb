@@ -42,14 +42,14 @@
 #include <boost/type_traits/is_floating_point.hpp>
 #include <boost/utility/enable_if.hpp>
 #include <boost/math/constants/constants.hpp>//for Pi
-#include <openvdb/math/Math.h>
-#include <openvdb/Types.h>
-#include <openvdb/Grid.h>
-#include <openvdb/tree/LeafManager.h>
-#include <openvdb/tree/ValueAccessor.h>
-#include <openvdb/math/FiniteDifference.h>
-#include <openvdb/math/Operators.h>
-#include <openvdb/util/NullInterrupter.h>
+#include <math/Math.h>
+#include <Types.h>
+#include <Grid.h>
+#include <tree/LeafManager.h>
+#include <tree/ValueAccessor.h>
+#include <math/FiniteDifference.h>
+#include <math/Operators.h>
+#include <util/NullInterrupter.h>
 
 namespace openvdb {
 OPENVDB_USE_VERSION_NAMESPACE

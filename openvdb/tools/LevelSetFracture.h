@@ -37,12 +37,12 @@
 #ifndef OPENVDB_TOOLS_LEVELSETFRACTURE_HAS_BEEN_INCLUDED
 #define OPENVDB_TOOLS_LEVELSETFRACTURE_HAS_BEEN_INCLUDED
 
-#include <openvdb/Grid.h>
-#include <openvdb/math/Quat.h>
-#include <openvdb/tree/LeafManager.h>
-#include <openvdb/tools/Prune.h>
-#include <openvdb/tools/SignedFloodFill.h>
-#include <openvdb/util/NullInterrupter.h>
+#include <Grid.h>
+#include <math/Quat.h>
+#include <tree/LeafManager.h>
+#include <tools/Prune.h>
+#include <tools/SignedFloodFill.h>
+#include <util/NullInterrupter.h>
 #include "Composite.h" // for csgIntersection() and csgDifference()
 #include "GridTransformer.h" // for resampleToMatch()
 #include "LevelSetUtil.h" // for MinMaxVoxel()
@@ -176,7 +176,7 @@ segment(GridType& grid, InterruptType* interrupter = NULL)
                 }
             }
         }
-        
+
         tools::pruneInactive(grid.tree());
         tools::signedFloodFill(segment->tree());
         segments.push_back(segment);

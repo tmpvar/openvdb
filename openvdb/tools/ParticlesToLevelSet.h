@@ -104,11 +104,11 @@
 #include <boost/type_traits/is_floating_point.hpp>
 #include <boost/utility/enable_if.hpp>
 #include <boost/mpl/if.hpp>
-#include <openvdb/Types.h>
-#include <openvdb/Grid.h>
-#include <openvdb/math/Math.h>
-#include <openvdb/math/Transform.h>
-#include <openvdb/util/NullInterrupter.h>
+#include <Types.h>
+#include <Grid.h>
+#include <math/Math.h>
+#include <math/Transform.h>
+#include <util/NullInterrupter.h>
 #include "Composite.h" // for csgUnion()
 #include "PointPartitioner.h"
 #include "Prune.h"
@@ -397,7 +397,7 @@ ParticlesToLevelSet<SdfGridT, AttributeT, InterrupterT>::finalize(bool prune)
             }
         }
     }
-    
+
     tools::signedFloodFill(*sdfTree);//required since we only transferred active voxels!
 
     if (mSdfGrid->empty()) {

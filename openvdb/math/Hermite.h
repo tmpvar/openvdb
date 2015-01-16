@@ -31,8 +31,8 @@
 #ifndef OPENVDB_MATH_HERMITE_HAS_BEEN_INCLUDED
 #define OPENVDB_MATH_HERMITE_HAS_BEEN_INCLUDED
 
-#include <openvdb/Platform.h>
-#include <openvdb/version.h>
+#include <Platform.h>
+#include <version.h>
 #include "QuantizedUnitVec.h"
 #include "Math.h"
 

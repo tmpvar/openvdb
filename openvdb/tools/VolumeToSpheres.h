@@ -31,13 +31,13 @@
 #ifndef OPENVDB_TOOLS_VOLUME_TO_SPHERES_HAS_BEEN_INCLUDED
 #define OPENVDB_TOOLS_VOLUME_TO_SPHERES_HAS_BEEN_INCLUDED
 
-#include <openvdb/tree/ValueAccessor.h>
-#include <openvdb/tree/LeafManager.h>
-#include <openvdb/tools/Morphology.h> // for erodeVoxels()
+#include <tree/ValueAccessor.h>
+#include <tree/LeafManager.h>
+#include <tools/Morphology.h> // for erodeVoxels()
 
-#include <openvdb/tools/PointScatter.h>
-#include <openvdb/tools/LevelSetUtil.h>
-#include <openvdb/tools/VolumeToMesh.h>
+#include <tools/PointScatter.h>
+#include <tools/LevelSetUtil.h>
+#include <tools/VolumeToMesh.h>
 
 #include <boost/scoped_array.hpp>
 #include <boost/scoped_ptr.hpp>

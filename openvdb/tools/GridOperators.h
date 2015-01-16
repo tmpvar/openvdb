@@ -36,11 +36,11 @@
 #ifndef OPENVDB_TOOLS_GRID_OPERATORS_HAS_BEEN_INCLUDED
 #define OPENVDB_TOOLS_GRID_OPERATORS_HAS_BEEN_INCLUDED
 
-#include <openvdb/Grid.h>
-#include <openvdb/math/Operators.h>
-#include <openvdb/util/NullInterrupter.h>
-#include <openvdb/tree/LeafManager.h>
-#include <openvdb/tree/ValueAccessor.h>
+#include <Grid.h>
+#include <math/Operators.h>
+#include <util/NullInterrupter.h>
+#include <tree/LeafManager.h>
+#include <tree/ValueAccessor.h>
 #include <tbb/parallel_for.h>
 
 

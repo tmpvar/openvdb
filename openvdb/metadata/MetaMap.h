@@ -33,9 +33,9 @@
 
 #include <iosfwd>
 #include <map>
-#include <openvdb/metadata/Metadata.h>
-#include <openvdb/Types.h>
-#include <openvdb/Exceptions.h>
+#include <metadata/Metadata.h>
+#include <Types.h>
+#include <Exceptions.h>
 
 
 namespace openvdb {

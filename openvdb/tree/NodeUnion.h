@@ -44,7 +44,7 @@
 #define OPENVDB_TREE_NODEUNION_HAS_BEEN_INCLUDED
 
 #include <boost/type_traits/is_class.hpp>
-#include <openvdb/version.h>
+#include <version.h>
 
 namespace openvdb {
 OPENVDB_USE_VERSION_NAMESPACE

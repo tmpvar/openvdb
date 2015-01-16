@@ -30,10 +30,10 @@
 
 #include <set>
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/openvdb.h>
-#include <openvdb/Types.h>
-#include <openvdb/tools/Filter.h>
-#include <openvdb/util/logging.h>
+#include "openvdb.h"
+#include <Types.h>
+#include <tools/Filter.h>
+#include <util/logging.h>
 #include "util.h" // for unittest_util::makeSphere()
 
 

@@ -36,10 +36,10 @@
 
 #include <algorithm>
 #include <vector>
-#include <openvdb/math/Math.h>             // for Pow2, needed by WENO and  Gudonov
-#include <openvdb/Types.h>                 // for Real
-#include <openvdb/math/Coord.h>            // for Coord
-#include <openvdb/math/FiniteDifference.h> // for WENO5 and GudonovsNormSqrd
+#include <math/Math.h>             // for Pow2, needed by WENO and  Gudonov
+#include <Types.h>                 // for Real
+#include <math/Coord.h>            // for Coord
+#include <math/FiniteDifference.h> // for WENO5 and GudonovsNormSqrd
 
 namespace openvdb {
 OPENVDB_USE_VERSION_NAMESPACE

@@ -44,13 +44,13 @@
 #include <boost/bind.hpp>
 #include <boost/function.hpp>
 #include <boost/type_traits/is_floating_point.hpp>
-#include <openvdb/Types.h>
-#include <openvdb/math/Math.h>
-#include <openvdb/math/Stencils.h>
-#include <openvdb/math/Transform.h>
-#include <openvdb/tree/LeafManager.h>
-#include <openvdb/util/NullInterrupter.h>
-#include <openvdb/Grid.h>
+#include <Types.h>
+#include <math/Math.h>
+#include <math/Stencils.h>
+#include <math/Transform.h>
+#include <tree/LeafManager.h>
+#include <util/NullInterrupter.h>
+#include <Grid.h>
 #include "Interpolation.h"
 
 namespace openvdb {

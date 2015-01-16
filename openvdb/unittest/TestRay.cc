@@ -29,14 +29,14 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/openvdb.h>
-#include <openvdb/math/Ray.h>
-#include <openvdb/math/DDA.h>
-#include <openvdb/math/BBox.h>
-#include <openvdb/Types.h>
-#include <openvdb/math/Transform.h>
-#include <openvdb/tools/LevelSetSphere.h>
+#include <Exceptions.h>
+#include "openvdb.h"
+#include <math/Ray.h>
+#include <math/DDA.h>
+#include <math/BBox.h>
+#include <Types.h>
+#include <math/Transform.h>
+#include <tools/LevelSetSphere.h>
 
 #define ASSERT_DOUBLES_EXACTLY_EQUAL(expected, actual) \
     CPPUNIT_ASSERT_DOUBLES_EQUAL((expected), (actual), /*tolerance=*/0.0);

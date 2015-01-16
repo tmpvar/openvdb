@@ -32,25 +32,25 @@
 #include <cppunit/extensions/HelperMacros.h>
 #include <boost/random/mersenne_twister.hpp>
 #include <tbb/atomic.h>
-#include <openvdb/Types.h>
-#include <openvdb/openvdb.h>
-#include <openvdb/tools/ChangeBackground.h>
-#include <openvdb/tools/Clip.h>
-#include <openvdb/tools/GridOperators.h>
-#include <openvdb/tools/Filter.h>
-#include <openvdb/tools/LevelSetUtil.h>
-#include <openvdb/tools/LevelSetSphere.h>
-#include <openvdb/tools/LevelSetAdvect.h>
-#include <openvdb/tools/LevelSetMeasure.h>
-#include <openvdb/tools/LevelSetMorph.h>
-#include <openvdb/tools/Morphology.h>
-#include <openvdb/tools/PointAdvect.h>
-#include <openvdb/tools/PointScatter.h>
-#include <openvdb/tools/ValueTransformer.h>
-#include <openvdb/tools/VectorTransformer.h>
-#include <openvdb/util/Util.h>
-#include <openvdb/util/CpuTimer.h>
-#include <openvdb/math/Stats.h>
+#include <Types.h>
+#include "openvdb.h"
+#include <tools/ChangeBackground.h>
+#include <tools/Clip.h>
+#include <tools/GridOperators.h>
+#include <tools/Filter.h>
+#include <tools/LevelSetUtil.h>
+#include <tools/LevelSetSphere.h>
+#include <tools/LevelSetAdvect.h>
+#include <tools/LevelSetMeasure.h>
+#include <tools/LevelSetMorph.h>
+#include <tools/Morphology.h>
+#include <tools/PointAdvect.h>
+#include <tools/PointScatter.h>
+#include <tools/ValueTransformer.h>
+#include <tools/VectorTransformer.h>
+#include <util/Util.h>
+#include <util/CpuTimer.h>
+#include <math/Stats.h>
 #include "util.h" // for unittest_util::makeSphere()
 
 #define ASSERT_DOUBLES_EXACTLY_EQUAL(expected, actual) \
@@ -620,7 +620,7 @@ TestTools::testErodeVoxels()
             }
         }
     }
-    /* Not completed yet 
+    /* Not completed yet
     {//erode18
         //for (int x=0; x<8; ++x) {
         //for (int y=0; y<8; ++y) {
@@ -644,7 +644,7 @@ TestTools::testErodeVoxels()
                     //}
                     //}
     }
-    
+
     {//erode26
         tree->clear();
         tree->setValue(openvdb::Coord(3,4,5), 1.0f);

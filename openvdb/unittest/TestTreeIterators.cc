@@ -29,10 +29,10 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/tree/Tree.h>
-#include <openvdb/openvdb.h>
-#include <openvdb/Types.h>
-#include <openvdb/tools/LevelSetSphere.h> // for tools::createLevelSetSphere()
+#include <tree/Tree.h>
+#include "openvdb.h"
+#include <Types.h>
+#include <tools/LevelSetSphere.h> // for tools::createLevelSetSphere()
 
 
 #define ASSERT_DOUBLES_EXACTLY_EQUAL(expected, actual) \

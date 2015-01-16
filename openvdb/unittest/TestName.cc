@@ -29,8 +29,8 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/util/Name.h>
+#include <Exceptions.h>
+#include <util/Name.h>
 
 class TestName : public CppUnit::TestCase
 {

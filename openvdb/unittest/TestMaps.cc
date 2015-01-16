@@ -29,9 +29,9 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/math/Maps.h>
-#include <openvdb/util/MapsUtil.h>
+#include <Exceptions.h>
+#include <math/Maps.h>
+#include <util/MapsUtil.h>
 
 
 class TestMaps: public CppUnit::TestCase

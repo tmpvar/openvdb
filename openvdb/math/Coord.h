@@ -31,7 +31,7 @@
 #ifndef OPENVDB_MATH_COORD_HAS_BEEN_INCLUDED
 #define OPENVDB_MATH_COORD_HAS_BEEN_INCLUDED
 
-#include <openvdb/Platform.h>
+#include <Platform.h>
 #include "Math.h"
 #include "Vec3.h"
 

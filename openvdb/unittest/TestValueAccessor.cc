@@ -31,8 +31,8 @@
 #include <cppunit/extensions/HelperMacros.h>
 #include <tbb/task.h>
 #include <boost/type_traits/remove_const.hpp>
-#include <openvdb/openvdb.h>
-#include <openvdb/tools/Prune.h>
+#include "openvdb.h"
+#include <tools/Prune.h>
 
 #define ASSERT_DOUBLES_EXACTLY_EQUAL(expected, actual) \
     CPPUNIT_ASSERT_DOUBLES_EQUAL((expected), (actual), /*tolerance=*/0.0);

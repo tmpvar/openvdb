@@ -29,7 +29,7 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/tools/PointPartitioner.h>
+#include <tools/PointPartitioner.h>
 
 #include <vector>
 

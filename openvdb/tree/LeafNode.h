@@ -40,9 +40,9 @@
 #include <tbb/blocked_range.h>
 #include <tbb/spin_mutex.h>
 #include <tbb/parallel_for.h>
-#include <openvdb/Types.h>
-#include <openvdb/util/NodeMasks.h>
-#include <openvdb/io/Compression.h> // for io::readData(), etc.
+#include <Types.h>
+#include <util/NodeMasks.h>
+#include <io/Compression.h> // for io::readData(), etc.
 #include "Iterator.h"
 
 

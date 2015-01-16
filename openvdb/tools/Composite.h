@@ -37,11 +37,11 @@
 #ifndef OPENVDB_TOOLS_COMPOSITE_HAS_BEEN_INCLUDED
 #define OPENVDB_TOOLS_COMPOSITE_HAS_BEEN_INCLUDED
 
-#include <openvdb/Platform.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/Types.h>
-#include <openvdb/Grid.h>
-#include <openvdb/math/Math.h> // for isExactlyEqual()
+#include <Platform.h>
+#include <Exceptions.h>
+#include <Types.h>
+#include <Grid.h>
+#include <math/Math.h> // for isExactlyEqual()
 #include "ValueTransformer.h" // for transformValues()
 #include "Prune.h"// for prune
 #include <boost/utility/enable_if.hpp>

@@ -29,7 +29,7 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/tree/Tree.h>
+#include <tree/Tree.h>
 
 
 class TestNodeIterator: public CppUnit::TestCase

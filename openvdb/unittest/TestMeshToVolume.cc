@@ -31,11 +31,11 @@
 #include <vector>
 #include <cppunit/extensions/HelperMacros.h>
 
-#include <openvdb/openvdb.h>
-#include <openvdb/Exceptions.h>
+#include "openvdb.h"
+#include <Exceptions.h>
 
-#include <openvdb/tools/MeshToVolume.h>
-#include <openvdb/util/Util.h>
+#include <tools/MeshToVolume.h>
+#include <util/Util.h>
 
 
 class TestMeshToVolume: public CppUnit::TestCase

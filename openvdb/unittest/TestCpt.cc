@@ -30,10 +30,10 @@
 
 #include <sstream>
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Types.h>
-#include <openvdb/openvdb.h>
-#include <openvdb/tools/GridOperators.h>
-#include <openvdb/math/Stencils.h> // for old GradientStencil
+#include <Types.h>
+#include "openvdb.h"
+#include <tools/GridOperators.h>
+#include <math/Stencils.h> // for old GradientStencil
 #include "util.h" // for unittest_util::makeSphere()
 
 #define ASSERT_DOUBLES_EXACTLY_EQUAL(expected, actual) \

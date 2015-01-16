@@ -32,7 +32,7 @@
 #define OPENVDB_MATH_VEC2_HAS_BEEN_INCLUDED
 
 #include <cmath>
-#include <openvdb/Exceptions.h>
+#include <Exceptions.h>
 #include "Math.h"
 #include "Tuple.h"
 

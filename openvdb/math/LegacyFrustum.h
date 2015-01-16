@@ -34,7 +34,7 @@
 #define OPENVDB_MATH_LEGACYFRUSTUM_HAS_BEEN_INCLUDED
 
 #include <iostream>
-#include <openvdb/Types.h> // for Real typedef
+#include <Types.h> // for Real typedef
 #include "Coord.h"
 #include "Mat4.h"
 #include "Vec3.h"
@@ -57,7 +57,7 @@ public:
         Vec3i tmpMin, tmpMax;
         is.read(reinterpret_cast<char*>(&tmpMin), sizeof(Vec3i::ValueType) * 3);
         is.read(reinterpret_cast<char*>(&tmpMax), sizeof(Vec3i::ValueType) * 3);
-        
+
         Coord tmpMinCoord(tmpMin);
         Coord tmpMaxCoord(tmpMax);
 

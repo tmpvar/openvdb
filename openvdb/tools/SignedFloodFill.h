@@ -40,11 +40,11 @@
 #define OPENVDB_TOOLS_SIGNEDFLOODFILL_HAS_BEEN_INCLUDED
 
 #include <boost/utility/enable_if.hpp>
-#include <openvdb/math/Math.h> // for math::negative
-#include <openvdb/Types.h> // for Index typedef
+#include <math/Math.h> // for math::negative
+#include <Types.h> // for Index typedef
 #include <boost/static_assert.hpp>
 #include <boost/type_traits/is_floating_point.hpp>
-#include <openvdb/tree/NodeManager.h>
+#include <tree/NodeManager.h>
 
 
 namespace openvdb {

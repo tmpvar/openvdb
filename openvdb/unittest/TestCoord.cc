@@ -29,7 +29,7 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Types.h>
+#include <Types.h>
 #include <sstream>
 #include <tbb/tbb_stddef.h> // for tbb::split
 

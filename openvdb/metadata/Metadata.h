@@ -33,10 +33,10 @@
 
 #include <iostream>
 #include <string>
-#include <openvdb/Types.h>
-#include <openvdb/math/Math.h> // for math::isZero()
-#include <openvdb/util/Name.h>
-#include <openvdb/Exceptions.h>
+#include <Types.h>
+#include <math/Math.h> // for math::isZero()
+#include <util/Name.h>
+#include <Exceptions.h>
 #include <boost/shared_ptr.hpp>
 #include <boost/cstdint.hpp>
 

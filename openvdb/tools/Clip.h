@@ -36,8 +36,8 @@
 #ifndef OPENVDB_TOOLS_CLIP_HAS_BEEN_INCLUDED
 #define OPENVDB_TOOLS_CLIP_HAS_BEEN_INCLUDED
 
-#include <openvdb/Grid.h>
-#include <openvdb/tree/LeafManager.h>
+#include <Grid.h>
+#include <tree/LeafManager.h>
 #include "GridTransformer.h" // for resampleToMatch()
 #include <boost/type_traits/is_same.hpp>
 #include <boost/type_traits/is_signed.hpp>

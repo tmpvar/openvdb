@@ -44,16 +44,16 @@
 #include <boost/bind.hpp>
 #include <boost/function.hpp>
 #include <boost/type_traits/is_floating_point.hpp>
-#include <openvdb/Types.h>
-#include <openvdb/math/Math.h>
-#include <openvdb/math/FiniteDifference.h>
-#include <openvdb/math/Operators.h>
-#include <openvdb/math/Stencils.h>
-#include <openvdb/math/Transform.h>
-#include <openvdb/Grid.h>
-#include <openvdb/util/NullInterrupter.h>
-#include <openvdb/tree/ValueAccessor.h>
-#include <openvdb/tree/LeafManager.h>
+#include <Types.h>
+#include <math/Math.h>
+#include <math/FiniteDifference.h>
+#include <math/Operators.h>
+#include <math/Stencils.h>
+#include <math/Transform.h>
+#include <Grid.h>
+#include <util/NullInterrupter.h>
+#include <tree/ValueAccessor.h>
+#include <tree/LeafManager.h>
 #include "ChangeBackground.h"// for changeLevelSetBackground
 #include "Morphology.h"//for dilateVoxels
 #include "Prune.h"// for pruneLevelSet

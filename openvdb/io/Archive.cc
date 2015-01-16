@@ -33,9 +33,9 @@
 #include "GridDescriptor.h"
 #include "io.h"
 
-#include <openvdb/Exceptions.h>
-#include <openvdb/Metadata.h>
-#include <openvdb/util/logging.h>
+#include <Exceptions.h>
+#include <Metadata.h>
+#include <util/logging.h>
 
 // Boost.Interprocess uses a header-only portion of Boost.DateTime
 #define BOOST_DATE_TIME_NO_LIB

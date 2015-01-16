@@ -29,8 +29,8 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/openvdb.h>
+#include <Exceptions.h>
+#include "openvdb.h"
 
 
 class TestInit: public CppUnit::TestCase
@@ -73,7 +73,7 @@ TestInit::test()
     CPPUNIT_ASSERT(math::TranslationMap::isRegistered());
     CPPUNIT_ASSERT(math::ScaleTranslateMap::isRegistered());
     CPPUNIT_ASSERT(math::NonlinearFrustumMap::isRegistered());
-    
+
     // grid types
     CPPUNIT_ASSERT(BoolGrid::isRegistered());
     CPPUNIT_ASSERT(FloatGrid::isRegistered());

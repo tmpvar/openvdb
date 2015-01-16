@@ -39,8 +39,8 @@
 #include <boost/static_assert.hpp>
 #include <boost/type_traits/is_const.hpp>
 #include <boost/type_traits/remove_const.hpp>
-#include <openvdb/util/NodeMasks.h>
-#include <openvdb/Exceptions.h>
+#include <util/NodeMasks.h>
+#include <Exceptions.h>
 
 namespace openvdb {
 OPENVDB_USE_VERSION_NAMESPACE

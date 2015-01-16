@@ -32,7 +32,7 @@
 #define OPENVDB_METADATA_STRINGMETADATA_HAS_BEEN_INCLUDED
 
 #include <string>
-#include <openvdb/metadata/Metadata.h>
+#include <metadata/Metadata.h>
 
 
 namespace openvdb {

@@ -30,7 +30,7 @@
 
 #include "Grid.h"
 
-#include <openvdb/Metadata.h>
+#include <Metadata.h>
 #include <boost/algorithm/string/case_conv.hpp>
 #include <boost/algorithm/string/trim.hpp>
 #include <tbb/mutex.h>

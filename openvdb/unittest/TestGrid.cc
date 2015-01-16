@@ -29,13 +29,13 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/openvdb.h>
-#include <openvdb/Types.h>
-#include <openvdb/util/Name.h>
-#include <openvdb/math/Transform.h>
-#include <openvdb/Grid.h>
-#include <openvdb/tree/Tree.h>
+#include <Exceptions.h>
+#include "openvdb.h"
+#include <Types.h>
+#include <util/Name.h>
+#include <math/Transform.h>
+#include <Grid.h>
+#include <tree/Tree.h>
 
 
 #define ASSERT_DOUBLES_EXACTLY_EQUAL(expected, actual) \

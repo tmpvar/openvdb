@@ -29,8 +29,8 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/math/Transform.h>
+#include <Exceptions.h>
+#include <math/Transform.h>
 #include <sstream>
 
 

@@ -34,7 +34,7 @@
 #include <exception>
 #include <string>
 #include <iostream>
-#include <openvdb/version.h>
+#include <version.h>
 
 namespace openvdb {
 OPENVDB_USE_VERSION_NAMESPACE

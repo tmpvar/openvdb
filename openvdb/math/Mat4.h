@@ -31,8 +31,8 @@
 #ifndef OPENVDB_MATH_MAT4_H_HAS_BEEN_INCLUDED
 #define OPENVDB_MATH_MAT4_H_HAS_BEEN_INCLUDED
 
-#include <openvdb/Exceptions.h>
-#include <openvdb/Platform.h>
+#include <Exceptions.h>
+#include <Platform.h>
 #include <iomanip>
 #include <assert.h>
 #include <math.h>

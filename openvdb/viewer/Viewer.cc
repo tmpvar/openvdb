@@ -34,9 +34,9 @@
 #include "ClipBox.h"
 #include "Font.h"
 #include "RenderModules.h"
-#include <openvdb/util/Formats.h> // for formattedInt()
-#include <openvdb/util/logging.h>
-#include <openvdb/version.h> // for OPENVDB_LIBRARY_MAJOR_VERSION, etc.
+#include <util/Formats.h> // for formattedInt()
+#include <util/logging.h>
+#include <version.h> // for OPENVDB_LIBRARY_MAJOR_VERSION, etc.
 #include <tbb/atomic.h>
 #include <tbb/mutex.h>
 #include <cmath> // for fabs()

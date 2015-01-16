@@ -30,14 +30,14 @@
 
 //#define BENCHMARK_TEST
 
-#include <openvdb/openvdb.h>
+#include "openvdb.h"
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/tools/LevelSetSphere.h>
-#include <openvdb/tools/Dense.h>
-#include <openvdb/Exceptions.h>
+#include <tools/LevelSetSphere.h>
+#include <tools/Dense.h>
+#include <Exceptions.h>
 #include <sstream>
 #ifdef BENCHMARK_TEST
-#include <openvdb/util/CpuTimer.h>
+#include <util/CpuTimer.h>
 #endif
 
 

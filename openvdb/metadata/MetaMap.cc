@@ -28,8 +28,8 @@
 //
 ///////////////////////////////////////////////////////////////////////////
 
-#include <openvdb/metadata/MetaMap.h>
-#include <openvdb/util/logging.h>
+#include <metadata/MetaMap.h>
+#include <util/logging.h>
 #include <sstream>
 
 

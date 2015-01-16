@@ -42,7 +42,7 @@
 #define OPENVDB_TREE_NODEMANAGER_HAS_BEEN_INCLUDED
 
 #include <tbb/parallel_for.h>
-#include <openvdb/Types.h>
+#include <Types.h>
 #include <deque>
 
 namespace openvdb {

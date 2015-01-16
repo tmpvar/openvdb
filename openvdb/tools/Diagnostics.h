@@ -31,11 +31,11 @@
 #ifndef OPENVDB_TOOLS_DIAGNOSTICS_HAS_BEEN_INCLUDED
 #define OPENVDB_TOOLS_DIAGNOSTICS_HAS_BEEN_INCLUDED
 
-#include <openvdb/Grid.h>
-#include <openvdb/math/Math.h>
-#include <openvdb/math/Vec3.h>
-#include <openvdb/math/Operators.h>
-#include <openvdb/tree/LeafManager.h>
+#include <Grid.h>
+#include <math/Math.h>
+#include <math/Vec3.h>
+#include <math/Operators.h>
+#include <tree/LeafManager.h>
 #include <tbb/blocked_range.h>
 #include <tbb/parallel_reduce.h>
 #include <set>
@@ -240,7 +240,7 @@ struct CheckMagnitude
 
     const ElementType absVal, tolVal;
 };// CheckMagnitude
-    
+
 /// @brief Checks a value against a range
 template <typename GridT,
           bool MinInclusive = true,//is min part of the range?

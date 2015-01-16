@@ -29,8 +29,8 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/tree/LeafNode.h>
+#include <Exceptions.h>
+#include <tree/LeafNode.h>
 
 class TestLeaf: public CppUnit::TestCase
 {

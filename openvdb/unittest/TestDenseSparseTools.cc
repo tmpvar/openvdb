@@ -29,12 +29,12 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/openvdb.h>
-#include <openvdb/tools/Dense.h>
-#include <openvdb/tools/DenseSparseTools.h>
-#include <openvdb/Types.h>
-#include <openvdb/math/Math.h>
+#include <Exceptions.h>
+#include "openvdb.h"
+#include <tools/Dense.h>
+#include <tools/DenseSparseTools.h>
+#include <Types.h>
+#include <math/Math.h>
 #include "util.h"
 
 class TestDenseSparseTools: public CppUnit::TestCase

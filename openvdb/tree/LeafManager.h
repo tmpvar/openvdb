@@ -47,7 +47,7 @@
 #include <boost/function.hpp>
 #include <tbb/blocked_range.h>
 #include <tbb/parallel_for.h>
-#include <openvdb/Types.h>
+#include <Types.h>
 #include "TreeIterator.h" // for CopyConstness
 
 namespace openvdb {

@@ -37,7 +37,7 @@
 #include <math.h>
 #include <iostream>
 #include <boost/format.hpp>
-#include <openvdb/Exceptions.h>
+#include <Exceptions.h>
 #include "Math.h"
 
 

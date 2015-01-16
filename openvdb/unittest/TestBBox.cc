@@ -29,11 +29,11 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/openvdb.h>
-#include <openvdb/math/BBox.h>
-#include <openvdb/Types.h>
-#include <openvdb/math/Transform.h>
+#include <Exceptions.h>
+#include "openvdb.h"
+#include <math/BBox.h>
+#include <Types.h>
+#include <math/Transform.h>
 
 typedef float Real;
 

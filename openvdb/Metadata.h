@@ -31,8 +31,8 @@
 #ifndef OPENVDB_METADATA_HAS_BEEN_INCLUDED
 #define OPENVDB_METADATA_HAS_BEEN_INCLUDED
 
-#include <openvdb/metadata/Metadata.h>
-#include <openvdb/metadata/StringMetadata.h>
+#include <metadata/Metadata.h>
+#include <metadata/StringMetadata.h>
 
 #endif // OPENVDB_METADATA_HAS_BEEN_INCLUDED
 

@@ -29,9 +29,9 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/tree/LeafNode.h>
-#include <openvdb/Types.h>
+#include <Exceptions.h>
+#include <tree/LeafNode.h>
+#include <Types.h>
 #include <cctype> // for toupper()
 #include <iostream>
 #include <sstream>

@@ -40,13 +40,13 @@
 #include <boost/cstdint.hpp>
 #include <tbb/atomic.h>
 #include <tbb/concurrent_hash_map.h>
-#include <openvdb/Types.h>
-#include <openvdb/metadata/Metadata.h>
-#include <openvdb/math/Math.h>
-#include <openvdb/math/BBox.h>
-#include <openvdb/util/Formats.h>
-#include <openvdb/util/logging.h>
-#include <openvdb/Platform.h>
+#include <Types.h>
+#include <metadata/Metadata.h>
+#include <math/Math.h>
+#include <math/BBox.h>
+#include <util/Formats.h>
+#include <util/logging.h>
+#include <Platform.h>
 #include "RootNode.h"
 #include "InternalNode.h"
 #include "LeafNode.h"
@@ -597,7 +597,7 @@ public:
     /// @brief Return this tree's background value wrapped as metadata.
     /// @note Query the metadata object for the value's type.
     virtual Metadata::Ptr getBackgroundValue() const;
-    
+
     /// @brief Return this tree's background value.
     ///
     /// @note Use tools::changeBackground to efficiently modify the

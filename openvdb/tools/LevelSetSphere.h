@@ -39,10 +39,10 @@
 #ifndef OPENVDB_TOOLS_LEVELSETSPHERE_HAS_BEEN_INCLUDED
 #define OPENVDB_TOOLS_LEVELSETSPHERE_HAS_BEEN_INCLUDED
 
-#include <openvdb/Grid.h>
-#include <openvdb/Types.h>
-#include <openvdb/math/Math.h>
-#include <openvdb/util/NullInterrupter.h>
+#include <Grid.h>
+#include <Types.h>
+#include <math/Math.h>
+#include <util/NullInterrupter.h>
 #include <boost/utility.hpp>
 #include <boost/type_traits/is_floating_point.hpp>
 #include "SignedFloodFill.h"
@@ -184,7 +184,7 @@ private:
 
         // Define consistant signed distances outside the narrow-band
         tools::signedFloodFill(mGrid->tree());
-        
+
         if (mInterrupt) mInterrupt->end();
     }
 

@@ -50,9 +50,9 @@
 #include <OpenEXR/ImfPixelType.h>
 #include <tbb/task_scheduler_init.h>
 #include <tbb/tick_count.h>
-#include <openvdb/openvdb.h>
-#include <openvdb/tools/RayIntersector.h>
-#include <openvdb/tools/RayTracer.h>
+#include "openvdb.h"
+#include <tools/RayIntersector.h>
+#include <tools/RayTracer.h>
 #ifdef DWA_OPENVDB
 #include <logging_base/logging.h>
 #include <usagetrack.h>

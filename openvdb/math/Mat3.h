@@ -34,7 +34,7 @@
 #include <iomanip>
 #include <assert.h>
 #include <math.h>
-#include <openvdb/Exceptions.h>
+#include <Exceptions.h>
 #include "Vec3.h"
 #include "Mat.h"
 

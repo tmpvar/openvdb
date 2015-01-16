@@ -29,11 +29,11 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/Types.h>
-#include <openvdb/tree/Tree.h>
-#include <openvdb/tools/ValueTransformer.h> // for tools::setValueOnMin() et al.
-#include <openvdb/tools/Prune.h>
+#include <Exceptions.h>
+#include <Types.h>
+#include <tree/Tree.h>
+#include <tools/ValueTransformer.h> // for tools::setValueOnMin() et al.
+#include <tools/Prune.h>
 
 #define ASSERT_DOUBLES_EXACTLY_EQUAL(expected, actual) \
     CPPUNIT_ASSERT_DOUBLES_EQUAL((expected), (actual), /*tolerance=*/0.0);

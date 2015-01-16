@@ -29,8 +29,8 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/openvdb.h>
+#include <Exceptions.h>
+#include "openvdb.h"
 #include <cstdio> // for remove()
 
 

@@ -30,7 +30,7 @@
 
 #include "Formats.h"
 
-#include <openvdb/Platform.h>
+#include <Platform.h>
 #include <iostream>
 #include <iomanip>
 

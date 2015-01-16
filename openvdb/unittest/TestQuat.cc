@@ -29,10 +29,10 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/math/Math.h>
-#include <openvdb/math/Quat.h>
-#include <openvdb/math/Mat4.h>
+#include <Exceptions.h>
+#include <math/Math.h>
+#include <math/Quat.h>
+#include <math/Mat4.h>
 
 using namespace openvdb::math;
 

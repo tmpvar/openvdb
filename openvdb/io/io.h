@@ -31,8 +31,8 @@
 #ifndef OPENVDB_IO_IO_HAS_BEEN_INCLUDED
 #define OPENVDB_IO_IO_HAS_BEEN_INCLUDED
 
-#include <openvdb/Platform.h>
-#include <openvdb/version.h>
+#include <Platform.h>
+#include <version.h>
 #include <boost/any.hpp>
 #include <boost/function.hpp>
 #include <boost/scoped_ptr.hpp>

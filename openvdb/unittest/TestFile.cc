@@ -32,15 +32,15 @@
 #include <boost/uuid/uuid_generators.hpp>
 #include <cppunit/extensions/HelperMacros.h>
 #include <tbb/tbb_thread.h> // for tbb::this_tbb_thread::sleep()
-#include <openvdb/Exceptions.h>
-#include <openvdb/io/File.h>
-#include <openvdb/io/Queue.h>
-#include <openvdb/io/Stream.h>
-#include <openvdb/Metadata.h>
-#include <openvdb/math/Transform.h>
-#include <openvdb/tools/LevelSetUtil.h> // for tools::sdfToFogVolume()
-#include <openvdb/version.h>
-#include <openvdb/openvdb.h>
+#include <Exceptions.h>
+#include <io/File.h>
+#include <io/Queue.h>
+#include <io/Stream.h>
+#include <Metadata.h>
+#include <math/Transform.h>
+#include <tools/LevelSetUtil.h> // for tools::sdfToFogVolume()
+#include <version.h>
+#include "openvdb.h"
 #include "util.h" // for unittest_util::makeSphere()
 #include <cstdio> // for remove() and rename()
 #include <fstream>

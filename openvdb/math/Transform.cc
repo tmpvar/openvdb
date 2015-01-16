@@ -31,7 +31,7 @@
 #include "Transform.h"
 #include "LegacyFrustum.h"
 
-#include <openvdb/version.h>
+#include <version.h>
 #include <sstream>
 #include <string>
 #include <vector>

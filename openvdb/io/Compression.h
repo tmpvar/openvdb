@@ -31,8 +31,8 @@
 #ifndef OPENVDB_IO_COMPRESSION_HAS_BEEN_INCLUDED
 #define OPENVDB_IO_COMPRESSION_HAS_BEEN_INCLUDED
 
-#include <openvdb/Types.h>
-#include <openvdb/math/Math.h> // for negative()
+#include <Types.h>
+#include <math/Math.h> // for negative()
 #include "io.h" // for getDataCompression(), etc.
 #include <boost/scoped_array.hpp>
 #include <algorithm>

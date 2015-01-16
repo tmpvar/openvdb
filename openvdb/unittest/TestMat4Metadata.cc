@@ -29,8 +29,8 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include <cppunit/extensions/HelperMacros.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/Metadata.h>
+#include <Exceptions.h>
+#include <Metadata.h>
 
 class TestMat4Metadata : public CppUnit::TestCase
 {

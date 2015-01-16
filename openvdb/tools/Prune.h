@@ -38,11 +38,11 @@
 #define OPENVDB_TOOLS_PRUNE_HAS_BEEN_INCLUDED
 
 #include <boost/utility/enable_if.hpp>
-#include <openvdb/math/Math.h> // for isNegative and negative
-#include <openvdb/Types.h> // for Index typedef
+#include <math/Math.h> // for isNegative and negative
+#include <Types.h> // for Index typedef
 #include <boost/static_assert.hpp>
-#include <openvdb/Types.h>
-#include <openvdb/tree/NodeManager.h>
+#include <Types.h>
+#include <tree/NodeManager.h>
 
 namespace openvdb {
 OPENVDB_USE_VERSION_NAMESPACE

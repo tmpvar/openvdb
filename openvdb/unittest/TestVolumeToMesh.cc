@@ -30,9 +30,9 @@
 
 #include <cppunit/extensions/HelperMacros.h>
 
-#include <openvdb/tools/VolumeToMesh.h>
-#include <openvdb/Exceptions.h>
-#include <openvdb/tree/LeafManager.h>
+#include <tools/VolumeToMesh.h>
+#include <Exceptions.h>
+#include <tree/LeafManager.h>
 
 #include <vector>
 

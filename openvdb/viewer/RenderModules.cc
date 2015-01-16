@@ -29,8 +29,8 @@
 ///////////////////////////////////////////////////////////////////////////
 
 #include "RenderModules.h"
-#include <openvdb/tools/Prune.h>
-#include <openvdb/util/logging.h>
+#include <tools/Prune.h>
+#include <util/logging.h>
 #include <math.h>
 
 

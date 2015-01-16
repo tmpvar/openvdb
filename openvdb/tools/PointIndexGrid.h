@@ -44,12 +44,12 @@
 #define OPENVDB_TOOLS_POINT_INDEX_GRID_HAS_BEEN_INCLUDED
 
 
-#include <openvdb/Grid.h>
-#include <openvdb/Types.h>
-#include <openvdb/math/Transform.h>
-#include <openvdb/tree/Tree.h>
-#include <openvdb/tree/LeafNode.h>
-#include <openvdb/tree/LeafManager.h>
+#include <Grid.h>
+#include <Types.h>
+#include <math/Transform.h>
+#include <tree/Tree.h>
+#include <tree/LeafNode.h>
+#include <tree/LeafManager.h>
 #include "PointPartitioner.h"
 
 #include <boost/scoped_array.hpp>

@@ -40,10 +40,10 @@
 #include <boost/shared_ptr.hpp>
 #include <tbb/blocked_range.h>
 #include <tbb/parallel_reduce.h>
-#include <openvdb/Grid.h>
-#include <openvdb/Types.h>
-#include <openvdb/math/Math.h> // for isApproxEqual()
-#include <openvdb/util/NullInterrupter.h>
+#include <Grid.h>
+#include <Types.h>
+#include <math/Math.h> // for isApproxEqual()
+#include <util/NullInterrupter.h>
 #include "ChangeBackground.h"
 #include "Interpolation.h"
 #include "LevelSetRebuild.h" // for doLevelSetRebuild()
