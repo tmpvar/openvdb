@@ -1,6 +1,16 @@
 Installing OpenVDB
 ==================
 
+# On osx
+
+```
+brew install openexr tbb log4cplus boost glfw3
+cmake .
+make
+out/bin/openvdb_viewer
+```
+
+
 Requirements
 ------------
 - GNU GCC (gcc.gnu.org), version 4.1 or later
