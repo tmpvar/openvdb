@@ -27,7 +27,30 @@
 PROJECT ( OpenVDBCore )
 cmake_minimum_required(VERSION 3.1)
 
-ADD_SUBDIRECTORY(deps/glfw-3.2.1)
+SET(GLFW_VERSION "3.2.1")
+SET(GLFW_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/deps/glfw-${GLFW_VERSION}")
+SET(GLFW_INCLUDE_DIR "${GLFW_LOCATION}/include")
+SET(GLFW_LIBRARY "${GLFW_LOCATION}/lib/Release/x64/glfw32")
+SET(GLFW_ZIP_FILE "${GLFW_LOCATION}.zip")
+IF (NOT EXISTS "${GLFW_LOCATION}")
+  file(
+    DOWNLOAD
+    "https://github.com/glfw/glfw/releases/download/${GLFW_VERSION}/glfw-${GLFW_VERSION}.zip"
+    "${GLFW_ZIP_FILE}"
+  )
+
+  execute_process(
+    COMMAND ${CMAKE_COMMAND} -E tar "xvf" ${GLFW_ZIP_FILE} --format=zip
+    WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/deps"
+    OUTPUT_VARIABLE glfw_extract_output
+    ERROR_VARIABLE glfw_extract_output
+  )
+
+  message("glfw extract results ${glfw_extract_output}")
+
+ENDIF()
+
+ADD_SUBDIRECTORY(deps/glfw-${GLFW_VERSION})
 # IF ( USE_GLFW3 )
 #   FIND_PACKAGE ( GLFW3 REQUIRED )
 #   SET ( OPENVDB_USE_GLFW_FLAG "-DOPENVDB_USE_GLFW_3" )
@@ -173,12 +196,40 @@ IF (NOT EXISTS "${TBB_INSTALL_DIR}")
   message("tbb extract results ${tbb_extract_output}")
 ENDIF()
 
+INCLUDE_DIRECTORIES(${TBB_INCLUDE_DIRS})
 # FIND_PACKAGE ( Blosc REQUIRED )
 # FIND_PACKAGE ( TBB REQUIRED )
-FIND_PACKAGE ( ZLIB REQUIRED )
+# FIND_PACKAGE ( ZLIB REQUIRED )
 
+## ZLIB
+SET(ZLIB_VERSION "1.2.3")
+SET(ZLIB_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/deps/zlib-${ZLIB_VERSION}")
+SET(ZLIB_ZIP_FILE "${ZLIB_SOURCES}.zip")
+IF (NOT EXISTS "${ZLIB_SOURCES}")
+  file(
+    DOWNLOAD
+    "https://downloads.sourceforge.net/project/gnuwin32/zlib/${ZLIB_VERSION}/zlib-${ZLIB_VERSION}-lib.zip"
+    "${ZLIB_ZIP_FILE}"
+  )
+
+  file(MAKE_DIRECTORY ${ZLIB_SOURCES})
+
+  execute_process(
+    COMMAND ${CMAKE_COMMAND} -E tar "xvf" ${ZLIB_ZIP_FILE} --format=zip
+    WORKING_DIRECTORY "${ZLIB_SOURCES}"
+    OUTPUT_VARIABLE ZLIB_extract_output
+    ERROR_VARIABLE ZLIB_extract_output
+  )
+
+  message("ZLIB extract results ${ZLIB_extract_output}")
+ENDIF()
+
+SET(ZLIB_INCLUDE_DIR "${ZLIB_SOURCES}/include")
+SET(ZLIB_LIBRARY "${ZLIB_SOURCES}/libs/zlib.lib")
+
+## OPENEXR/ILMBASE
 SET(OPENEXR_VERSION "2.2.0")
-SET(OPENEXR_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/deps/OpenEXR-${OPENEXR_VERSION}")
+SET(OPENEXR_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/deps/openexr-${OPENEXR_VERSION}")
 SET(OPENEXR_ZIP_FILE "${OPENEXR_SOURCES}.zip")
 IF (NOT EXISTS "${OPENEXR_SOURCES}")
   file(
@@ -197,22 +248,43 @@ IF (NOT EXISTS "${OPENEXR_SOURCES}")
   message("OPENEXR extract results ${OPENEXR_extract_output}")
 ENDIF()
 
-SET(BUILD_SHARED_LIBS OFF)
-ADD_SUBDIRECTORY(${OPENEXR_SOURCES}/OpenEXR/)
-ADD_SUBDIRECTORY(${OPENEXR_SOURCES}/IlmBase/)
-
-SET (
-  ILMBASE_INCLUDE_DIRS
+INCLUDE_DIRECTORIES (
   ${OPENEXR_SOURCES}/IlmBase/Half/
+  ${OPENEXR_SOURCES}/IlmBase/HalfTest/
+  ${OPENEXR_SOURCES}/IlmBase/Imath/
+  ${OPENEXR_SOURCES}/IlmBase/ImathTest/
+  ${OPENEXR_SOURCES}/IlmBase/Iex/
+  ${OPENEXR_SOURCES}/IlmBase/IexMath/
+  ${OPENEXR_SOURCES}/IlmBase/IexTest/
+  ${OPENEXR_SOURCES}/IlmBase/IlmThread/
   ${OPENEXR_SOURCES}/OpenEXR/IlmImf/
   ${OPENEXR_SOURCES}/OpenEXR/IlmImfFuzzTest/
   ${OPENEXR_SOURCES}/OpenEXR/config/
   ${OPENEXR_SOURCES}/OpenEXR/exraces/
   ${OPENEXR_SOURCES}/OpenEXR/exrbuild/
   ${OPENEXR_SOURCES}/OpenEXR/exrenvmap/
+  ${CMAKE_CURRENT_BINARY_DIR}/deps/openexr-${OPENEXR_VERSION}/IlmBase/config/
 )
 
-INCLUDE_DIRECTORIES ( ${OPENEXR_SOURCES}/IlmBase/Half/ )
+link_directories(
+  ${CMAKE_CURRENT_BINARY_DIR}/deps/openexr-${OPENEXR_VERSION}/IlmBase/Half/Debug/
+  ${CMAKE_CURRENT_BINARY_DIR}/deps/openexr-${OPENEXR_VERSION}/IlmBase/HalfTest/Debug/
+  ${CMAKE_CURRENT_BINARY_DIR}/deps/openexr-${OPENEXR_VERSION}/IlmBase/Imath/Debug/
+  ${CMAKE_CURRENT_BINARY_DIR}/deps/openexr-${OPENEXR_VERSION}/IlmBase/ImathTest/Debug/
+  ${CMAKE_CURRENT_BINARY_DIR}/deps/openexr-${OPENEXR_VERSION}/IlmBase/Iex/Debug/
+  ${CMAKE_CURRENT_BINARY_DIR}/deps/openexr-${OPENEXR_VERSION}/IlmBase/IexMath/Debug/
+  ${CMAKE_CURRENT_BINARY_DIR}/deps/openexr-${OPENEXR_VERSION}/IlmBase/IexTest/Debug/
+  ${CMAKE_CURRENT_BINARY_DIR}/deps/openexr-${OPENEXR_VERSION}/IlmBase/IlmThread/Debug/
+  ${CMAKE_CURRENT_BINARY_DIR}/deps/openexr-${OPENEXR_VERSION}/OpenEXR/IlmImf/Debug/
+  ${CMAKE_CURRENT_BINARY_DIR}/deps/openexr-${OPENEXR_VERSION}/OpenEXR/IlmImfFuzzTest/Debug/
+  ${CMAKE_CURRENT_BINARY_DIR}/deps/openexr-${OPENEXR_VERSION}/OpenEXR/exraces/Debug/
+  ${CMAKE_CURRENT_BINARY_DIR}/deps/openexr-${OPENEXR_VERSION}/OpenEXR/exrbuild/Debug/
+  ${CMAKE_CURRENT_BINARY_DIR}/deps/openexr-${OPENEXR_VERSION}/OpenEXR/exrenvmap/Debug/
+)
+
+SET(BUILD_SHARED_LIBS OFF)
+ADD_SUBDIRECTORY(${OPENEXR_SOURCES}/OpenEXR/)
+ADD_SUBDIRECTORY(${OPENEXR_SOURCES}/IlmBase/)
 
 # FIND_PACKAGE ( ILMBase REQUIRED )
 # FIND_PACKAGE ( OpenEXR REQUIRED )
@@ -309,7 +381,7 @@ TARGET_LINK_LIBRARIES ( openvdb_static
   ${Boost_LIBRARIES}
   ${PYTHON_LIBRARY}
   ${Tbb_TBB_LIBRARY}
-  ${Ilmbase_HALF_LIBRARY}
+  IlmBase
   ${ZLIB_LIBRARY}
   )
 # TARGET_LINK_LIBRARIES ( openvdb_shared
@@ -381,22 +453,22 @@ SET_SOURCE_FILES_PROPERTIES ( ${VDB_VIEW_SOURCE_FILES}
   )
 IF (NOT WIN32)
   ADD_EXECUTABLE ( vdb_view
-	${VDB_VIEW_SOURCE_FILES}
+	   ${VDB_VIEW_SOURCE_FILES}
 	)
 
-TARGET_LINK_LIBRARIES ( vdb_view
-  openvdb_static
-  ${CMAKE_THREAD_LIBS_INIT}
-  ${CMAKE_DL_LIBS}
-  ${BLOSC_blosc_LIBRARY}
-  ${OPENGL_gl_LIBRARY}
-  ${OPENGL_glu_LIBRARY}
-  ${COCOA_LIBRARY}
-  ${IOKIT_LIBRARY}
-  ${COREVIDEO_LIBRARY}
-  ${GLFW_LINK_LIBRARY}
-  ${GLFW_DEPENDENT_LIBRARIES}
-  ${GLEW_GLEW_LIBRARY}
+  TARGET_LINK_LIBRARIES ( vdb_view
+    openvdb_static
+    ${CMAKE_THREAD_LIBS_INIT}
+    ${CMAKE_DL_LIBS}
+    blosc
+    ${OPENGL_gl_LIBRARY}
+    ${OPENGL_glu_LIBRARY}
+    ${COCOA_LIBRARY}
+    ${IOKIT_LIBRARY}
+    ${COREVIDEO_LIBRARY}
+    glfw
+    ${GLFW_DEPENDENT_LIBRARIES}
+    ${GLEW_GLEW_LIBRARY}
   )
 ENDIF ()
 
