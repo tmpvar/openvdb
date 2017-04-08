@@ -36,6 +36,13 @@
 #include <iostream>
 #include <openvdb/version.h>
 
+// avoid:
+// Error	10	error C3646: 'noexcept' : unknown override specifier	d:\work\openvdb\openvdb\Exceptions.h	52	1	openvdb_static
+// see: http://stackoverflow.com/questions/18387640/how-to-deal-with-noexcept-in-visual-studio
+#ifdef _NOEXCEPT
+#define noexcept _NOEXCEPT
+#endif
+
 namespace openvdb {
 OPENVDB_USE_VERSION_NAMESPACE
 namespace OPENVDB_VERSION_NAME {
